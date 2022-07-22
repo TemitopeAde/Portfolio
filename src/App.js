@@ -8,14 +8,11 @@ import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <button onClick={themeToggler}>Switch Theme</button>
-      <Home />
+
+      <Home theme={theme} setTheme={setTheme} />
     </ThemeProvider>
   );
 }
