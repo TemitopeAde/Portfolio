@@ -8,82 +8,142 @@ const Header = ({ theme, setTheme }) => {
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
-  return (
-    <header className="header">
-      <Box>
-        {/* <button onClick={themeToggler}>Switch Theme</button> */}
 
+  if (window.innerWidth <= 900) {
+    return (
+      <header
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+        }}
+        className="mobile-header"
+      >
         <Box>
-          <Container>
-            <Grid container spacing={3}>
-              <Grid item xs={6}>
+          <Box>
+            <Container>
+              <Stack
+                alignItems="center"
+                justifyContent="center"
+                direction="row"
+                spacing={3}
+                className="mobile-navlinks"
+              >
                 <Box>
-                  <Stack
-                    direction="row"
-                    spacing={1}
-                    justifyContent="flex-start"
-                    alignItems="center"
-                  >
-                    
+                  <li>
+                    <a
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                      href="#aboutme"
+                    >
+                      <span style={{fontSize: '1.3rem'}}>
+                        <MdOutlineDarkMode />
+                      </span>
+                      <span style={{fontSize: '1rem', marginTop: '-4px'}}>About me</span>
+                      
+                    </a>
+                  </li>
+                </Box>
+                <Box>
+                  <li>
+                    <a href="#portfolio">Portfolio</a>
+                  </li>
+                </Box>
+                <Box>
+                  <li>
+                    <a href="#work">Work</a>
+                  </li>
+                </Box>
+                <Box>
+                  <li>
+                    <a href="#contactme">Contact me</a>
+                  </li>
+                </Box>
+              </Stack>
+            </Container>
+          </Box>
+        </Box>
+      </header>
+    );
+  }
+
+  if (window.innerWidth > 900) {
+    return (
+      <header className="header">
+        <Box>
+          <Box>
+            <Container>
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <Box>
+                    <Stack
+                      direction="row"
+                      spacing={1}
+                      justifyContent="flex-start"
+                      alignItems="center"
+                    >
                       <Box p="6px 20px" className="surname">
                         <Typography variant="h6">A</Typography>
                       </Box>
 
                       <Typography variant="h6">Temitope</Typography>
-                    
-                  </Stack>
-                </Box>
+                    </Stack>
+                  </Box>
+                </Grid>
+                <Grid item xs={6}>
+                  <Box className="navlinks">
+                    <Grid
+                      sx={{ margin: 0 }}
+                      container
+                      columnSpacing={4}
+                      rowSpacing={1}
+                    >
+                      <Grid item>
+                        <li>
+                          <a href="#aboutme">About me</a>
+                        </li>
+                      </Grid>
+                      <Grid item>
+                        <li>
+                          <a href="#portfolio">Portfolio</a>
+                        </li>
+                      </Grid>
+                      <Grid item>
+                        <li>
+                          <a href="#work">Work</a>
+                        </li>
+                      </Grid>
+                      <Grid item>
+                        <li>
+                          <a href="#contactme">Contact me</a>
+                        </li>
+                      </Grid>
+                      <Grid item>
+                        <li>
+                          {theme === "light" ? (
+                            <button onClick={themeToggler}>
+                              <MdOutlineDarkMode />
+                            </button>
+                          ) : (
+                            <button onClick={themeToggler}>
+                              <MdLightMode />
+                            </button>
+                          )}
+                        </li>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Grid>
               </Grid>
-              <Grid item xs={6}>
-                <Box className="navlinks">
-                  <Grid
-                    sx={{ margin: 0 }}
-                    container
-                    columnSpacing={4}
-                    rowSpacing={1}
-                  >
-                    <Grid item>
-                      <li>
-                        <a href="#aboutme">About me</a>
-                      </li>
-                    </Grid>
-                    <Grid item>
-                      <li>
-                        <a href="#portfolio">Portfolio</a>
-                      </li>
-                    </Grid>
-                    <Grid item>
-                      <li>
-                        <a href="#work">Work</a>
-                      </li>
-                    </Grid>
-                    <Grid item>
-                      <li>
-                        <a href="#contactme">Contact me</a>
-                      </li>
-                    </Grid>
-                    <Grid item>
-                      <li>
-                        {theme === "light" ? (
-                          <button onClick={themeToggler}>
-                            <MdOutlineDarkMode />
-                          </button>
-                        ) : (
-                          <button onClick={themeToggler}>
-                            <MdLightMode />
-                          </button>
-                        )}
-                      </li>
-                    </Grid>
-                  </Grid>
-                </Box>
-              </Grid>
-            </Grid>
-          </Container>
+            </Container>
+          </Box>
         </Box>
-      </Box>
-    </header>
-  );
+      </header>
+    );
+  }
 };
 
 export default Header;
