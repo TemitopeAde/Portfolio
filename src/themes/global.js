@@ -45,5 +45,14 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.surnameColor};
   }
 
+  .form-control {
+    border: 0.1em solid ${({ theme }) => theme.surnameColor};
+    color: ${({ theme }) => theme.text};
+  }
+
+  .submit-btn {
+    background: ${({ theme }) => theme.text};
+
+  }
   
 `;

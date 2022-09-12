@@ -2,6 +2,7 @@ import React from 'react';
 import {Box} from '@mui/material';
 import Header from './Header';
 import Banner from './Banner';
+import ContactMe from './ContactMe';
 
 const Home = ({theme,setTheme}) => {
   return (
@@ -9,6 +10,8 @@ const Home = ({theme,setTheme}) => {
         
         <Header theme={theme} setTheme={setTheme} />
         <Banner />
+
+        <ContactMe />
     </Box>
   )
 }
