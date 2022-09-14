@@ -3,6 +3,8 @@ import {Box} from '@mui/material';
 import Header from './Header';
 import Banner from './Banner';
 import ContactMe from './ContactMe';
+import Projects from './Projects';
+import Services from './Services';
 
 const Home = ({theme,setTheme}) => {
   return (
@@ -10,7 +12,8 @@ const Home = ({theme,setTheme}) => {
         
         <Header theme={theme} setTheme={setTheme} />
         <Banner />
-
+        <Services />
+        <Projects />
         <ContactMe />
     </Box>
   )

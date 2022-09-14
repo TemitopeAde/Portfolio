@@ -39,11 +39,12 @@ const Header = ({ theme, setTheme }) => {
                       }}
                       href="#aboutme"
                     >
-                      <span style={{fontSize: '1.3rem'}}>
+                      <span style={{ fontSize: "1.3rem" }}>
                         <MdOutlineDarkMode />
                       </span>
-                      <span style={{fontSize: '1rem', marginTop: '-4px'}}>About me</span>
-                      
+                      <span style={{ fontSize: "1rem", marginTop: "-4px" }}>
+                        About me
+                      </span>
                     </a>
                   </li>
                 </Box>
@@ -75,70 +76,71 @@ const Header = ({ theme, setTheme }) => {
       <header className="header">
         <Box>
           <Box>
-            <Container>
-              <Grid container spacing={3}>
-                <Grid item xs={6}>
-                  <Box>
-                    <Stack
-                      direction="row"
-                      spacing={1}
-                      justifyContent="flex-start"
-                      alignItems="center"
-                    >
-                      <Box p="6px 20px" className="surname">
-                        <Typography variant="h6">A</Typography>
-                      </Box>
+            <Grid container spacing={3}>
+              <Grid item xs={6}>
+                <Box>
+                  <Stack
+                    direction="row"
+                    spacing={1}
+                    justifyContent="flex-start"
+                    alignItems="center"
+                  >
+                    <Box p="6px 20px" className="surname">
+                      <Typography variant="h6" className="header-big">A</Typography>
+                    </Box>
 
-                      <Typography variant="h6">Temitope</Typography>
-                    </Stack>
-                  </Box>
-                </Grid>
-                <Grid item xs={6}>
-                  <Box className="navlinks">
-                    <Grid
-                      sx={{ margin: 0 }}
-                      container
-                      columnSpacing={4}
-                      rowSpacing={1}
-                    >
-                      <Grid item>
-                        <li>
-                          <a href="#aboutme">About me</a>
-                        </li>
-                      </Grid>
-                      <Grid item>
-                        <li>
-                          <a href="#portfolio">Portfolio</a>
-                        </li>
-                      </Grid>
-                      <Grid item>
-                        <li>
-                          <a href="#work">Work</a>
-                        </li>
-                      </Grid>
-                      <Grid item>
-                        <li>
-                          <a href="#contactme">Contact me</a>
-                        </li>
-                      </Grid>
-                      <Grid item>
-                        <li>
-                          {theme === "light" ? (
-                            <button onClick={themeToggler}>
-                              <MdOutlineDarkMode />
-                            </button>
-                          ) : (
-                            <button onClick={themeToggler}>
-                              <MdLightMode />
-                            </button>
-                          )}
-                        </li>
-                      </Grid>
-                    </Grid>
-                  </Box>
-                </Grid>
+                    <Typography variant="h6" className="header-big">Temitope</Typography>
+                  </Stack>
+                </Box>
               </Grid>
-            </Container>
+              <Grid item xs={6}>
+                <Box className="navlinks">
+                  <Grid
+                    sx={{ margin: 0 }}
+                    container
+                    columnSpacing={2}
+                    rowSpacing={1}
+                    justifyContent="flex-end"
+                    pr="3rem"
+                    alignItems="flex-end"
+                  >
+                    <Grid item>
+                      <li>
+                        <a className="header-small" href="#aboutme">About me</a>
+                      </li>
+                    </Grid>
+                    <Grid item>
+                      <li>
+                        <a className="header-small" href="#portfolio">Portfolio</a>
+                      </li>
+                    </Grid>
+                    <Grid item>
+                      <li>
+                        <a className="header-small" href="#work">Work</a>
+                      </li>
+                    </Grid>
+                    <Grid item>
+                      <li>
+                        <a className="header-small" href="#contactme">Contact me</a>
+                      </li>
+                    </Grid>
+                    <Grid item>
+                      <li>
+                        {theme === "light" ? (
+                          <button onClick={themeToggler}>
+                            <MdOutlineDarkMode />
+                          </button>
+                        ) : (
+                          <button onClick={themeToggler}>
+                            <MdLightMode />
+                          </button>
+                        )}
+                      </li>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </header>

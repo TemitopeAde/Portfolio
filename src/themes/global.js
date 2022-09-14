@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     content: '';
     background-color: ${({ theme }) => theme.border};
     height: 2px;
-    top: 22px;
+    top: 34px;
     right: 0;
     left: 0;
     width: 100%;
@@ -52,7 +52,20 @@ export const GlobalStyles = createGlobalStyle`
 
   .submit-btn {
     background: ${({ theme }) => theme.text};
+    border: ${({ theme }) => theme.text};
+  }
 
+  
+
+  .services p,
+  .intro h6 {
+    color:  ${({ theme }) => theme.lightDark};
+  }
+
+  .services-section {
+    background: ${({ theme }) => theme.lightBackground};
+    padding: 4rem;
+    padding-bottom: 7rem;
   }
   
 `;
