@@ -64,23 +64,23 @@ const Services = () => {
                     <path
                       d="M25.5255 30.5786L15.6309 38.001L25.5255 45.4233"
                       stroke="#AD97FF"
-                      stroke-width="6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M50.4727 30.5786L60.37 38.001L50.4727 45.4233"
                       stroke="#AD97FF"
-                      stroke-width="6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M40.4727 25.6289L35.5254 50.371"
                       stroke="#AD97FF"
-                      stroke-width="6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </Box>

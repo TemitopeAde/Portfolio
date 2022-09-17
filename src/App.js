@@ -3,6 +3,7 @@ import Home from "./Home";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./themes/global";
 import { lightTheme, darkTheme } from "./themes/theme";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -11,8 +12,12 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-
-      <Home theme={theme} setTheme={setTheme} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home theme={theme} setTheme={setTheme} />} />
+        </Routes>
+        
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

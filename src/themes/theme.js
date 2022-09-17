@@ -12,7 +12,7 @@ export const lightTheme = {
     lightBackground: '#f6f7ff',
 }
 export const darkTheme = {
-    body: '#02021d',
+    body: '#000',
     text: '#FAFAFA',
     toggleBorder: '#6B8096',
     background: '#999',
@@ -22,5 +22,5 @@ export const darkTheme = {
     surnameColor: '#7CFC00',
     navcolor: '#7CFC00',
     lightDark: 'whitesmoke',
-    lightBackground: '#02021d',
+    lightBackground: '#000',
 }

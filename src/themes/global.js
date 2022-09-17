@@ -67,5 +67,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 4rem;
     padding-bottom: 7rem;
   }
+
   
 `;
